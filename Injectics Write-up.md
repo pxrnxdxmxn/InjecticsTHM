@@ -10,6 +10,7 @@
 	SQLi vulnerability that was found through bruteforcing payloads and lead into RCE with SSTI
 
 **Steps to reproduce:**
+
 		1.  Use nmap to find open ports: nmap -sC -sV -v injectics.thm
 		
 		2.  Since i found open 80 port - visit site on that port
