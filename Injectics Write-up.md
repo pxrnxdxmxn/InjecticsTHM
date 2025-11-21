@@ -42,11 +42,6 @@
 			4. Working payload:  `{{ ['id',''] | sort('passthru') }}`  This executed system-level commands through `passthru`, giving a primitive form of RCE.
 			5. Using this technique, I executed commands to inspect the `/var/www/html` directory and attempted to access the `/flags` folder which was found recently with `dirsearch` and returned `403 Forbidden` when accessed normally.
 			6. By running commands via the SSTI payload, I bypassed the access restriction and retrieved the flag file content successfully.
-**Evidence:**
-![[Pasted image 20251121013602.png]]
-{{ ['cat /var/www/html/flags/5d8af1dc14503c7e4bdc8e51a3469f48.txt','']|sort('passthru') }}
-![[Pasted image 20251121013658.png]]
-
 
 **Risk level and Priority**
 
